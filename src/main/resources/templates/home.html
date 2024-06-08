@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+				xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
 <meta charset="utf-8">
@@ -12,6 +13,11 @@
 </head>
 	<body>
 		<div class="container">
+		
+			    <p>
+			        User: <span sec:authentication="principal.username"></span>
+			        Role(s): <span sec:authentication="principal.authorities"></span>
+			    </p>
 			<h1>Welcome to Spring MVC - Security ...</h1>
 			<hr>
 			Welcome to Home Page...	
