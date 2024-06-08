@@ -8,7 +8,7 @@ public class LoginController {
 	
 	@GetMapping("/showMyLoginForm")
 	public String showLoginForm() {
-		return "plain-login";
+		return "bootstarp-login";
 	}
 
 }
