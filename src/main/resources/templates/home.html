@@ -14,7 +14,12 @@
 		<div class="container">
 			<h1>Welcome to Spring MVC - Security ...</h1>
 			<hr>
-			Welcome to Home Page...			
+			Welcome to Home Page...	
+			<hr>
+			    <!-- Add a logout button -->
+    			<form action="#" th:action="@{/logout}" method="POST">
+        			<input type="submit" value="Logout" />
+    			</form>		
 		</div>
 	</body>
 </html>

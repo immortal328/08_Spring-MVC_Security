@@ -30,7 +30,7 @@ public class SpringSecurity {
 								.loginPage("/showMyLoginForm")
 								.loginProcessingUrl("/authenticateTheUser")
 								.permitAll()
-				);
+				).logout(logout -> logout.permitAll());
 		return http.build();
 	}
 	
