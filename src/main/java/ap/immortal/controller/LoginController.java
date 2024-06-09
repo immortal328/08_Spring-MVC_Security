@@ -10,5 +10,10 @@ public class LoginController {
 	public String showLoginForm() {
 		return "bootstarp-login";
 	}
+	
+	@GetMapping("/access-denied")
+	public String accessDenied() {
+		return "access-denied";
+	}
 
 }
