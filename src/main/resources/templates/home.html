@@ -23,15 +23,13 @@
 			Welcome to Home Page...	
 			
 			<hr>
-			<!-- Add a link to point to /leaders ... this is for the managers -->
-			<p> <a th:href="@{/leaders}">Leadership Meeting</a>
-			    (Only for Manager peeps)
-			</p>
+			<div sec:authorize="hasRole('MANAGER')">
+				<p> <a th:href="@{/leaders}">Leadership Meeting</a> (Only for Manager peeps) </p>
+			</div>
 			
-			<p><a th:href="@{/systems}">IT Systems Meeting</a>
-			    (Only for Admin peeps)
-			</p>
-
+			<div sec:authorize="hasRole('ADMIN')">
+				<p><a th:href="@{/systems}">IT Systems Meeting</a> (Only for Admin peeps)</p>			
+			</div>
 			<hr>
 			    <!-- Add a logout button -->
     			<form action="#" th:action="@{/logout}" method="POST">
