@@ -9,30 +9,19 @@
 	  rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
 	  crossorigin="anonymous">
 
-<title>Spring MVC - Security</title>
+<title>Systems Home Page</title>
 </head>
 	<body>
 		<div class="container">
-		
-			    <p>
-			        User: <span sec:authentication="principal.username"></span>
-			        Role(s): <span sec:authentication="principal.authorities"></span>
-			    </p>
-			<h1>Welcome to Spring MVC - Security ...</h1>
-			<hr>
-			Welcome to Home Page...	
-			
-			<hr>
-			<!-- Add a link to point to /leaders ... this is for the managers -->
-			<p> <a th:href="@{/leaders}">Leadership Meeting</a>
-			    (Only for Manager peeps)
-			</p>
-			
-			<p><a th:href="@{/systems}">IT Systems Meeting</a>
-			    (Only for Admin peeps)
-			</p>
-
-			<hr>
+			 <p>
+			  	User: <span sec:authentication="principal.username"></span>
+			    Role(s): <span sec:authentication="principal.authorities"></span>
+			  </p>
+			  <hr>
+			  
+			   <h1>Welcome to Spring MVC - Security ... Systems</h1>
+		 	    Welcome to ADMIN's Page...	
+			   <hr>
 			    <!-- Add a logout button -->
     			<form action="#" th:action="@{/logout}" method="POST">
         			<input type="submit" value="Logout" />

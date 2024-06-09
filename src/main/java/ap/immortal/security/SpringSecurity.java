@@ -23,8 +23,10 @@ public class SpringSecurity {
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception  {
 		http.authorizeHttpRequests(
 				configure -> configure
-							.anyRequest()
-							.authenticated()
+			                .requestMatchers("/").hasAnyRole("EMPLOYEE","MANAGER","ADMIN")
+			                .requestMatchers("/leaders/**").hasRole("MANAGER")
+			                .requestMatchers("/systems/**").hasRole("ADMIN")
+			                .anyRequest().authenticated()
 				).formLogin(
 						form -> form
 								.loginPage("/showMyLoginForm")
