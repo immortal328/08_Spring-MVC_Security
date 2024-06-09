@@ -9,13 +9,18 @@ import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-//@Configuration
-public class SpringSecurityJDBC {
+@Configuration
+public class SpringSecurityCustomJDBC {
 	
-	//Use JDBC Database 
+	//Use JDBC Databse
+	// When You have differeant Database Schema
 	@Bean
-	UserDetailsManager userDetailsManager(DataSource dataSource) {
-		return new JdbcUserDetailsManager(dataSource);
+	UserDetailsManager userDetailsManagerForDiffDatabaseSchema(DataSource dataSource) {
+		JdbcUserDetailsManager jdbcUserDetailsmanager = new JdbcUserDetailsManager(dataSource);
+		
+		jdbcUserDetailsmanager.setUsersByUsernameQuery("SELECT user_id, pw, active FROM MEMBERS WHERE user_id=?");
+		jdbcUserDetailsmanager.setAuthoritiesByUsernameQuery("SELECT user_id, role FROM ROLES WHERE user_id=?");
+		return jdbcUserDetailsmanager;
 	}
 	
 	@Bean
