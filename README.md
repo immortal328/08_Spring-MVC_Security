@@ -14,3 +14,22 @@ Key Features:
 8. **MySQL Database Integration**: Utilizing MySQL database for persistent storage of application data, ensuring data integrity and scalability.
 
 With this project, developers can learn how to effectively utilize the Spring ecosystem to build secure, scalable, and maintainable web applications. By incorporating best practices in authentication, authorization, and data security, the project serves as a valuable resource for understanding and implementing robust security measures in modern web development.
+
+# Working Application Screenshots
+
+# Custom login Page: Valid & Invalid login
+<div>
+  <img width="33%" src="https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Custom%20Login%20Page.JPG">
+  <img width="33%" src="https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Custom%20Login%20Page%20-%20Invalid%20user%20details.JPG">
+</div>
+
+# Logged In as Role: Employee
+![Home Page Showing All Employees](https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Welcome%20Page%20fro%20Employee.JPG)
+
+# Logged In as Role: Manager
+![Home Page Showing All Employees](https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Welcome%20Page%20fro%20Manager.JPG)
+![Home Page Showing All Employees](https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Welcome%20Page%20fro%20Manager2.JPG)
+
+# Logged In as Role: Admin
+![Home Page Showing All Employees](https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Welcome%20Page%20fro%20ADMIN1.JPG)
+![Home Page Showing All Employees](https://github.com/immortal328/Certificates/blob/main/Spring-MVC_Security/Welcome%20Page%20fro%20ADMIN2.JPG)
