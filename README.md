@@ -1,4 +1,4 @@
-# Title: Secure Web Application Development with Spring Boot 3 and Spring Security
+# Secure Web Application Development with Spring Boot 3 and Spring Security
 
 Description:
 This project is a comprehensive demonstration of building a secure web application using the latest technologies in the Spring ecosystem. Leveraging Spring Boot 3 and Spring Security, the application incorporates role-based access control and user authentication to ensure robust security measures.
